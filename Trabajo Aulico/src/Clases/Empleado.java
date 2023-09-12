@@ -15,16 +15,14 @@ public class Empleado {
     private double sueldo;
     private Empresa empresa;
 
-     
-
-    public Empleado(int dni, String nombre, String apellido, String Categoria, double sueldo) {
+    public Empleado(int dni, String nombre, String apellido, String Categoria, double sueldo, Empresa empresa) {
         this.dni = dni;
         this.nombre = nombre;
         this.apellido = apellido;
         this.Categoria = Categoria;
         this.sueldo = sueldo;
-       
-    }
+        this.empresa = empresa;
+    }    
 
     public int getDni() {
         return dni;

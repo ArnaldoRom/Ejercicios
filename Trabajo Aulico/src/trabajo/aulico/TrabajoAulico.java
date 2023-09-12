@@ -6,9 +6,10 @@ package trabajo.aulico;
 
 import Clases.Empleado;
 import Clases.Empresa;
-import static Clases.Empresa.empleados;
-
+import java.awt.Color;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
+import javax.swing.UIManager;
 
 /**
  *
@@ -85,18 +86,25 @@ public class TrabajoAulico extends javax.swing.JFrame {
 
         jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 153, 153), 2, true));
 
+        jlDocumento.setFont(new java.awt.Font("Ebrima", 1, 12)); // NOI18N
         jlDocumento.setText("Documento");
 
+        jlNombre.setFont(new java.awt.Font("Ebrima", 1, 12)); // NOI18N
         jlNombre.setText("Nombre");
 
+        jlApellido.setFont(new java.awt.Font("Ebrima", 1, 12)); // NOI18N
         jlApellido.setText("Apellido");
 
+        jlCategoria.setFont(new java.awt.Font("Ebrima", 1, 12)); // NOI18N
         jlCategoria.setText("Categoria");
 
+        jlSueldo.setFont(new java.awt.Font("Ebrima", 1, 12)); // NOI18N
         jlSueldo.setText("Sueldo");
 
+        jlEmpresas.setFont(new java.awt.Font("Ebrima", 1, 12)); // NOI18N
         jlEmpresas.setText("Empresas -->");
 
+        jbGuardar.setFont(new java.awt.Font("Ebrima", 1, 12)); // NOI18N
         jbGuardar.setText("Guardar");
         jbGuardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -104,6 +112,7 @@ public class TrabajoAulico extends javax.swing.JFrame {
             }
         });
 
+        jbMostrar.setFont(new java.awt.Font("Ebrima", 1, 12)); // NOI18N
         jbMostrar.setText("Mostrar Empleados");
         jbMostrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -111,7 +120,7 @@ public class TrabajoAulico extends javax.swing.JFrame {
             }
         });
 
-        jcbCategoria.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Gerente", "Jefe", "Administrativo", "Supervisor", "Operario" }));
+        jcbCategoria.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "GERENTE", "JEFE", "ADMINISTRATIVO", "SUPERVISOR", "OPERARIO" }));
         jcbCategoria.setSelectedIndex(-1);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -184,10 +193,13 @@ public class TrabajoAulico extends javax.swing.JFrame {
 
         jPanel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 153, 153), 2, true));
 
+        jlRazonSocial.setFont(new java.awt.Font("Ebrima", 1, 12)); // NOI18N
         jlRazonSocial.setText("Razon Social");
 
+        jlCuit.setFont(new java.awt.Font("Ebrima", 1, 12)); // NOI18N
         jlCuit.setText("C.U.I.T");
 
+        jbCrearEmpresa.setFont(new java.awt.Font("Ebrima", 1, 12)); // NOI18N
         jbCrearEmpresa.setText("Crear Empresa");
         jbCrearEmpresa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -230,17 +242,22 @@ public class TrabajoAulico extends javax.swing.JFrame {
                 .addContainerGap(31, Short.MAX_VALUE))
         );
 
+        jlTitulo2.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         jlTitulo2.setText("Ingrese datos");
 
+        jlTitulo1.setFont(new java.awt.Font("Ebrima", 1, 14)); // NOI18N
         jlTitulo1.setText("Ingrese datos");
 
         jMenu1.setText("Empleado");
+        jMenu1.setFont(new java.awt.Font("Ebrima", 1, 12)); // NOI18N
         jMenuBar1.add(jMenu1);
 
         jMenu2.setText("Empresa");
+        jMenu2.setFont(new java.awt.Font("Ebrima", 1, 12)); // NOI18N
         jMenuBar1.add(jMenu2);
 
         jMenu7.setText("Sueldo");
+        jMenu7.setFont(new java.awt.Font("Ebrima", 1, 12)); // NOI18N
         jMenuBar1.add(jMenu7);
 
         setJMenuBar(jMenuBar1);
@@ -252,18 +269,16 @@ public class TrabajoAulico extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
                         .addGap(22, 22, 22)
-                        .addComponent(jlTitulo1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(14, 14, 14)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(8, 8, 8)
+                        .addComponent(jlTitulo1)))
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(28, 28, 28)
-                        .addComponent(jlTitulo2))
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(34, Short.MAX_VALUE))
+                    .addComponent(jlTitulo2)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -274,9 +289,9 @@ public class TrabajoAulico extends javax.swing.JFrame {
                     .addComponent(jlTitulo1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(21, Short.MAX_VALUE))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
 
         pack();
@@ -289,11 +304,11 @@ public class TrabajoAulico extends javax.swing.JFrame {
         String razon=jtfRazonSocial.getText();
         int cuit=Integer.parseInt(jtfCuit.getText());        
         Empresa empNuevo= new Empresa(razon,cuit);
-        if(razon.isEmpty()){
-            JOptionPane.showMessageDialog(this,"Ingrese datos");
+        if(razon.isEmpty()&&jtfCuit.getText()==null){
+            JOptionPane.showMessageDialog(this,"Llene los Campos");
             return;
         }        
-        jcbEmpresa.addItem(empNuevo.getRazonSocial());
+        jcbEmpresa.addItem(empNuevo);
         limpiarEmpresa();       
         }catch(NumberFormatException v){
             JOptionPane.showMessageDialog(this,"Ingrese solo numeros");
@@ -302,56 +317,45 @@ public class TrabajoAulico extends javax.swing.JFrame {
 
     private void jbGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbGuardarActionPerformed
         // TODO add your handling code here:
+      try{
         int doc=Integer.parseInt(jtfDocumento.getText());
         String nom=jtfNombre.getText();
         String ape=jtfApellido.getText();
         String cat=jcbCategoria.getSelectedItem().toString();
-        double sue=Double.parseDouble(jtfSueldo.getText());              
-        Empleado n1=new Empleado(doc,nom,ape,cat,sue);
-        
-        for(int i=0;i<empleados.size();i++){
-            if(empleados.get(i).getEmpresa()==jcbEmpresa.getSelectedItem()){
-                n1.setEmpresa(empleados.get(i).s);
-                 
-                 emp.get(i).agregarEmpleado(n1);
-                 JOptionPane.showMessageDialog(this,"tra "+emp.get(i).getRazonSocial());
-                 
-                
-                
-            }
-        }
-       
-        
-        
-        
-        
-        
-            
-      
-        
+        double sue=Double.parseDouble(jtfSueldo.getText()); 
+        Empresa empSelec=(Empresa)jcbEmpresa.getSelectedItem();
+        Empleado empleado=new Empleado(doc,nom,ape,cat,sue,empSelec);
+        if(nom.isEmpty()||ape.isEmpty()||cat.isEmpty()){
+            JOptionPane.showMessageDialog(this,"Debe llenar los campos!!");
+            return;
+        }        
+        empSelec.agregarEmpleado(empleado);          
         limpiarEmpleado();
-        
-        
-     
-        
-        
-        
+        }catch(NumberFormatException v){
+            if(jtfDocumento.getSelectedText()==null)
+          JOptionPane.showMessageDialog(this,"Llene los campos de Documento  Sueldo");
+        }catch(NullPointerException f){
+            if(jcbCategoria.getSelectedItem()==null){
+                JOptionPane.showMessageDialog(this,"Selecione una Categoria");
+            } else if(jcbEmpresa.getSelectedItem()==null){
+                JOptionPane.showMessageDialog(this,"Seleccione una Empresa");
+            }            
+        }            
     }//GEN-LAST:event_jbGuardarActionPerformed
 
     private void jbMostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbMostrarActionPerformed
         // TODO add your handling code here:
-        for(int i=0;i<emp.size();i++){
-            if(emp.get(i).getRazonSocial()==jcbEmpresa.getSelectedItem().toString()){
-                emp.get(i).getEmpleados();
-                
-            }
+         try{
+        Empresa Selec=(Empresa)jcbEmpresa.getSelectedItem();
+        ArrayList<Empleado> empleados=Selec.mostrarEmpleado();
+        
+        for (Empleado emplea : empleados){
+            JOptionPane.showMessageDialog(this,emplea.getCategoria()+": "+emplea.getNombre()+" "+emplea.getApellido());            
         }
-        
-        
-        
-        
-        
-                
+        }catch(RuntimeException v){
+            JOptionPane.showMessageDialog(this,"Selecione una Empresa!!");
+        }
+        jcbEmpresa.setSelectedIndex(-1);               
     }//GEN-LAST:event_jbMostrarActionPerformed
 
     /**
@@ -363,6 +367,10 @@ public class TrabajoAulico extends javax.swing.JFrame {
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
+        
+        Color color=new Color(209,242,235);
+        UIManager.put("control",color);
+        UIManager.put("nimbusSelectionBackground",new Color(118,215,196));
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -426,7 +434,7 @@ public class TrabajoAulico extends javax.swing.JFrame {
     private javax.swing.JButton jbGuardar;
     private javax.swing.JButton jbMostrar;
     private javax.swing.JComboBox<String> jcbCategoria;
-    private javax.swing.JComboBox<String> jcbEmpresa;
+    private javax.swing.JComboBox<Empresa> jcbEmpresa;
     private javax.swing.JLabel jlApellido;
     private javax.swing.JLabel jlCategoria;
     private javax.swing.JLabel jlCuit;

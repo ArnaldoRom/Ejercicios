@@ -14,12 +14,11 @@ import java.util.Objects;
 public class Empresa {
     private String razonSocial;
     private int cuit;
-    public static ArrayList<Empleado> empleados;
+    public ArrayList<Empleado> empleados=new ArrayList<>();
 
     public Empresa(String razonSocial, int cuit) {
         this.razonSocial = razonSocial;
-        this.cuit = cuit;
-        this.empleados = new ArrayList<Empleado>();
+        this.cuit = cuit;       
     }
 
     public String getRazonSocial() {
@@ -38,20 +37,18 @@ public class Empresa {
         this.cuit = cuit;
     }
 
-    public ArrayList<Empleado> getEmpleados() {
+    public ArrayList<Empleado> mostrarEmpleado() {
         return empleados;
+    }  
+       
+    public void agregarEmpleado(Empleado e){        
+        empleados.add(e);
     }
 
-    public void setEmpleados(ArrayList<Empleado> empleados) {
-        this.empleados = empleados;
-    }
-       
-    public void agregarEmpleado(Empleado e){
-        
-        empleados.add(e);
-        
-    }
-   
+    @Override
+    public String toString() {
+        return razonSocial ;
+    }   
 
     @Override
     public int hashCode() {
@@ -73,8 +70,5 @@ public class Empresa {
         }
         final Empresa other = (Empresa) obj;
         return Objects.equals(this.razonSocial, other.razonSocial);
-    }
-    
-    
-    
+    }    
 }
